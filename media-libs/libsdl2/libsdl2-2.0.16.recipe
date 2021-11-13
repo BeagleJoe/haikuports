@@ -51,7 +51,7 @@ BUILD_PREREQUIRES="
 
 BUILD()
 {
-	cmake -L . -Bbuild -GNinja $cmakeDirArgs \
+	cmake . -Bbuild -GNinja $cmakeDirArgs \
 		-DSDL_STATIC=OFF -DRPATH=OFF \
 		-DCMAKE_BUILD_TYPE=Release
 	ninja -C build
